@@ -11,7 +11,7 @@ Herramientas tcnologicas:
 Mocrosotf SQL Server Manegment
 Phyton: 
 
-## 🔄 Flujo de Trabajo ETL {#flujo-etl}
+## Flujo de Trabajo ETL {flujo-etl}
 
 ### ¿Qué es ETL?
 
