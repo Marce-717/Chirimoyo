@@ -1,7 +1,7 @@
 # Proyecto FIA Chirimoyos
 ## Universidad de Chile 
 ### Autor: Marcelo Toro M. - Ing. Agrónomo
-### Prefesional encargado: Nicolas Cortéz - Ing. Agrónomo
+### Prefesional encargado: Nicolas Cortés - Ing. Agrónomo
 
 Diseñar y crear una base de datos para un sistema agricola de cultivo de chirimoya. Esta base de datos debe contener toda la información climática de recopilada de estaciones metereológicas en 2 condiciones distintas, cultivo al aire libre y bajo invernadero.
 
