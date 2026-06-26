@@ -7,10 +7,6 @@ Diseñar y crear una base de datos para un sistema agricola de cultivo de chirim
 
 Las variables recolectadas provienen de datos recolectados por el software de riego CDTEC y cuyos datos son recolectados decargando los planillas .csv directamente. 
 
-### Limpieza
-### Validación
-### Carga 
-
 ### Herramientas tecnologicas
 Herramientas tcnologicas:
 Mocrosotf SQL Server Manegment
