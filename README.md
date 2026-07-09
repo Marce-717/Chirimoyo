@@ -3,9 +3,35 @@
 ### Autor: Marcelo Toro M. - Ing. Agrónomo
 ### Prefesional encargado: Nicolas Cortés - Ing. Agrónomo
 
-Diseñar y crear una base de datos para un sistema agricola de cultivo de chirimoya. Esta base de datos debe contener toda la información climática de recopilada de estaciones metereológicas en 2 condiciones distintas, cultivo al aire libre y bajo invernadero.
+---
 
-Las variables recolectadas provienen de datos recolectados por el software de riego CDTEC y cuyos datos son recolectados decargando los planillas .csv directamente. 
+## 📋 Descripción
+
+Este repositorio contiene el pipeline **ETL (Extract · Transform · Load)** desarrollado para el Proyecto FIA de investigación en cultivo de chirimoyos (*Annona cherimola* Mill.) en **Agrícola HC**, en el marco de una iniciativa de digitalización agrícola financiada por la Fundación para la Innovación Agraria (FIA).
+
+El objetivo central es **centralizar, validar y estructurar** los datos climáticos y de riego generados por sensores en campo (Campo e Invernadero) en una base de datos relacional SQL Server, habilitando el análisis estadístico, la visualización temporal y el desarrollo futuro de modelos predictivos fenológicos.
+
+---
+
+---
+
+## 🗂️ Estructura del Repositorio
+
+```
+Chirimoyo/
+│
+├── 📓 ETL_Agricola_HC.ipynb           ← Pipeline ETL ejecutable (7 celdas)
+├── 📓 Entregable_FIA.ipynb            ← Informe técnico de diseño (v1.0)
+├── 📓 Informe_ETL_AgricolaHC_FIA.ipynb ← Informe técnico consolidado (v2.0)
+│
+├── 📊 Dep_FIA_climas_riegos_sondas.xlsx ← Datos fuente de sensores
+│                                          1.860 registros · 15 variables
+│                                          Período: 2023-11-11 → 2026-05-28
+│
+└── 📄 README.md
+```
+
+---
 
 ### Herramientas tecnologicas
 Herramientas tcnologicas:
