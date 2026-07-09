@@ -30,38 +30,7 @@ Chirimoyo/
 ---
 ## ⚙️ Pipeline ETL · Resumen
 
-```
-SENSORES EN CAMPO
-      ↓
-EXCEL (.xlsx)  ←  Dep FIA climas riegos sondas.xlsx
-      ↓               1.860 filas × 15 columnas
-                       
-   ── FASE E · EXTRACCIÓN ──────────────────────────
-      pd.read_excel() + renombrado de columnas
-      
-   ── FASE V · VALIDACIÓN ──────────────────────────
-      8 reglas de negocio agronómicas
-      
-   ── FASE T · TRANSFORMACIÓN ──────────────────────
-      Estandarización · flags de auditoría · NaN→NULL
-      
-   ── FASE L · CARGA ───────────────────────────────
-      INSERT por lotes (200 filas) · rollback por lote
-      
-BASE DE DATOS SQL SERVER
-      ↓
-  CH_UCHILE · MedicionesClimaticas
-  1.860 registros · 100% de coincidencia verificada
-```
-
 ---
-### Herramientas tecnologicas
-Herramientas tcnologicas:
-Mocrosotf SQL Server Manegment
-Phyton: 
-
-## Flujo de Trabajo ETL {flujo-etl}
-
 ### ¿Qué es ETL?
 
 **E**xtract → **T**ransform → **L**oad
@@ -92,3 +61,8 @@ SENSOR EN CAMPO (temperatura, humedad, etc.)
     BASE DE DATOS LISTA PARA ANÁLISIS
 
 ```
+
+### Herramientas tecnologicas
+Herramientas tcnologicas:
+Mocrosotf SQL Server Manegment
+Phyton: 
