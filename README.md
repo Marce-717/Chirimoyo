@@ -54,7 +54,7 @@ SENSOR EN CAMPO (temperatura, humedad, etc.)
     (;  UTF-8 BOM, CRLF)
         ↓
     [SQL SERVER] - CARGA
-        - BULK INSERT a stg.mediciones_raw
+        - BULK INSERT a MedicionesClimaticas
         - Validación adicional
         - Transformación a fact.*
         ↓
