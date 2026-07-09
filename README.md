@@ -55,6 +55,47 @@ BASE DE DATOS SQL SERVER
 ```
 ---
 
+### 8 Reglas de Validación Implementadas
+
+| # | Regla | Variables | Criterio |
+|---|-------|-----------|----------|
+| R1 | Nulos obligatorios | `fecha`, `tratamiento`, `temp_*`, `hr_*` | NOT NULL |
+| R2 | Duplicados | `fecha + tratamiento` | Clave candidata única |
+| R3 | Coherencia temperatura | `min ≤ media ≤ max` | Consistencia física |
+| R4 | Coherencia HR | `min ≤ media ≤ max` | Consistencia física |
+| R5 | Rango temperatura | `−5°C ≤ T ≤ 45°C` | Rango fisiológico chirimoya |
+| R6 | Rango humedad relativa | `0% ≤ HR ≤ 100%` | Límites del sensor |
+| R7 | Precipitaciones | `precip ≥ 0 mm` | Magnitud física |
+| R8 | Radiación / ILD | `Rad ≥ 0, ILD ≥ 0` | Energía solar no negativa |
+
+---
+
+## 🗄️ Modelo de Base de Datos
+
+### Tabla `MedicionesClimaticas` · Fact Table
+
+| Campo | Tipo SQL | Nullable | Unidad |
+|-------|----------|----------|--------|
+| `id` | INT IDENTITY (PK) | ✗ | — |
+| `fecha` | DATE | ✗ | YYYY-MM-DD |
+| `tratamiento` | NVARCHAR(50) | ✗ | Campo / Invernadero |
+| `temp_min` / `temp_media` / `temp_max` | FLOAT | ✓ | °C |
+| `hr_min` / `hr_media` / `hr_max` | FLOAT | ✓ | % |
+| `precipitaciones_mm` | FLOAT | ✓ | mm |
+| `piranometro_rg` | FLOAT | ✓ | W/m² |
+| `rad_diaria_mj` | FLOAT | ✓ | MJ/m²/día |
+| `ild_mol` | FLOAT | ✓ | mol/m²/día |
+| `dpv_kpa` | FLOAT | ✓ | kPa |
+| `horas_frio` / `hf_acumuladas` | FLOAT | ✓ | h |
+| `flag_revision` | BIT | ✗ | 0=OK · 1=revisar |
+| `fecha_carga` | DATETIME | ✗ | Timestamp ingesta |
+
+### Tabla `Catalogo` · Dimension Table
+
+Almacena los parámetros del sistema de riego por tratamiento: superficie, densidad de plantas, caudal por gotero, presión de operación y número de emisores por hectárea.
+
+**Relación:** `Catalogo.tratamiento (1) → MedicionesClimaticas.tratamiento (N)`
+---
 ### Herramientas tecnologicas
 Herramientas tcnologicas:
 Mocrosotf SQL Server Manegment
