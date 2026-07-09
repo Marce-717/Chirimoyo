@@ -7,7 +7,7 @@
 
 ## 📋 Descripción
 
-Este repositorio contiene el pipeline **ETL (Extract · Transform · Load)** desarrollado para el Proyecto FIA de investigación en cultivo de chirimoyos (*Annona cherimola* Mill.) en **Agrícola HC**, en el marco de una iniciativa de digitalización agrícola financiada por la Fundación para la Innovación Agraria (FIA).
+Este repositorio contiene el pipeline **ETL (Extract · Transform · Load)** desarrollado para el Proyecto FIA de investigación en cultivo de chirimoyos en **Agrícola HC**, en el marco de una iniciativa de digitalización agrícola financiada por la Fundación para la Innovación Agraria (FIA).
 
 El objetivo central es **centralizar, validar y estructurar** los datos climáticos y de riego generados por sensores en campo (Campo e Invernadero) en una base de datos relacional SQL Server, habilitando el análisis estadístico, la visualización temporal y el desarrollo futuro de modelos predictivos fenológicos.
 
@@ -21,7 +21,6 @@ El objetivo central es **centralizar, validar y estructurar** los datos climáti
 Chirimoyo/
 │
 ├── 📓 ETL_Agricola_HC.ipynb           ← Pipeline ETL ejecutable (7 celdas)
-├── 📓 Entregable_FIA.ipynb            ← Informe técnico de diseño (v1.0)
 ├── 📓 Informe_ETL_AgricolaHC_FIA.ipynb ← Informe técnico consolidado (v2.0)
 │
 ├── 📊 Dep_FIA_climas_riegos_sondas.xlsx ← Datos fuente de sensores
