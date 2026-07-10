@@ -131,13 +131,13 @@ pip install pandas numpy sqlalchemy pyodbc openpyxl matplotlib
 
 ## 📌 Contexto del Proyecto
 
-El chirimoyos es un frutal de alta relevancia para la zona centro-sur de Chile. Este proyecto busca caracterizar las condiciones agroclimáticas que determinan la fenología del cultivo, aportando evidencia científica para la toma de decisiones productivas y la adaptación al cambio climático.
+Este proyecto busca caracterizar las condiciones agroclimáticas que determinan la fenología del cultivo, aportando evidencia científica para la toma de decisiones productivas y la adaptación al cambio climático.
 
 ---
 
 ## 📄 Licencia
 
-Este repositorio se desarrolla en el contexto de un proyecto de investigación financiado por **FIA** (Fundación para la Innovación Agraria). Uso académico y de investigación.
+Este repositorio se desarrolla en el contexto de un proyecto de investigación financiado por **FIA** (Fundación para la Innovación Agraria). Documento para ser usado por Agricola HC.
 
 ---
 
