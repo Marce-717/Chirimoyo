@@ -9,7 +9,7 @@
 
 Este repositorio contiene el pipeline **ETL (Extract · Transform · Load)** desarrollado para el Proyecto FIA de investigación en cultivo de chirimoyos en **Agrícola HC**, en el marco de una iniciativa de digitalización agrícola financiada por la Fundación para la Innovación Agraria (FIA).
 
-El objetivo central es **centralizar, validar y estructurar** los datos climáticos generados por sensores en campo (Campo e Invernadero) en una base de datos relacional SQL Server, habilitando el análisis estadístico, la visualización temporal y el desarrollo futuro de modelos predictivos fenológicos.
+El objetivo central es **estructurar, centralizar y validar** los datos climáticos generados por sensores en campo (Campo e Invernadero) en una base de datos relacional SQL Server, habilitando el análisis estadístico, la visualización temporal y el desarrollo futuro de modelos predictivos fenológicos.
 
 ---
 
@@ -62,7 +62,83 @@ SENSOR EN CAMPO (temperatura, humedad, etc.)
 
 ```
 
-### Herramientas tecnologicas
-Herramientas tcnologicas:
-Mocrosotf SQL Server Manegment
-Phyton: 
+---
+
+## 🛠️ Stack Tecnológico
+
+### Python
+
+| Librería | Uso |
+|---|---|
+| `pandas` | Lectura, limpieza y transformación de datos |
+| `numpy` | Operaciones numéricas |
+| `pyodbc` / `sqlalchemy` | Conexión a SQL Server Express |
+| `matplotlib` | Visualización de series temporales |
+| `jupyter` | Entorno interactivo de análisis |
+
+### Base de datos
+
+| Componente | Detalle |
+|---|---|
+| Motor | Microsoft SQL Server Express |
+| Instancia local | `LAPTOP-PUELCHE\SQLEXPRESS` |
+| Base de datos | `FIA` |
+| Tabla principal | `MedicionesClimaticas` |
+| Gestión | SQL Server Management Studio (SSMS) |
+
+---
+
+## 🚀 Cómo ejecutar el pipeline
+
+### Prerrequisitos
+
+```bash
+pip install pandas numpy sqlalchemy pyodbc openpyxl matplotlib
+```
+
+> Se requiere tener instalado **SQL Server Express** con la instancia `LAPTOP-PUELCHE\SQLEXPRESS` activa y la base de datos `FIA` creada.
+
+### Pasos
+
+1. Clonar el repositorio
+   ```bash
+   git clone https://github.com/Marce-717/Chirimoyo.git
+   cd Chirimoyo
+   ```
+
+2. Abrir `ETL_Agricola_HC.ipynb` en Jupyter Lab o Jupyter Notebook
+
+3. Ejecutar las celdas en orden (7 celdas secuenciales):
+   - Celda 1 → Importación de librerías y conexión a SQL Server
+   - Celda 2 → Lectura y exploración del `.xlsx`
+   - Celda 3 → Limpieza y validación de datos
+   - Celda 4 → Transformación al formato SQL
+   - Celda 5 → TRUNCATE de seguridad (opcional)
+   - Celda 6 → Carga por lotes con rollback automático
+   - Celda 7 → Consultas analíticas y visualizaciones
+
+---
+
+## 📊 Análisis incluidos
+
+- ✅ Análisis Exploratorio de Datos (EDA)
+- ✅ Series temporales de temperatura, humedad y DPV
+- ✅ Acumulación de horas frío por temporada
+- ✅ Estadísticos descriptivos por tratamiento (Campo vs. Invernadero)
+- 🔄 Modelado predictivo fenológico *(en desarrollo)*
+
+---
+
+## 📌 Contexto del Proyecto
+
+El chirimoyos es un frutal de alta relevancia para la zona centro-sur de Chile. Este proyecto busca caracterizar las condiciones agroclimáticas que determinan la fenología del cultivo, aportando evidencia científica para la toma de decisiones productivas y la adaptación al cambio climático.
+
+---
+
+## 📄 Licencia
+
+Este repositorio se desarrolla en el contexto de un proyecto de investigación financiado por **FIA** (Fundación para la Innovación Agraria). Uso académico y de investigación.
+
+---
+
+*Universidad de Chile · Facultad de Ciencias Agronómicas*
